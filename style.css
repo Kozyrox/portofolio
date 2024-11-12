@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.light-theme {
+    background-color: #f0f0f0;
+    color: #4b4b4b;
+}
+#interests h2.light-theme {
+    color: #4b4b4b;
+}
+#interests h2.dark-theme {
+    color: #d3d3d3;
+}
+#skills h2.light-theme {
+    color: #4b4b4b;
+}
+#skills h2.dark-theme {
+    color: #d3d3d3;
+}
+body.dark-theme {
+    background-color: #695757;
+    color: #4b4b4b;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+}
+
+/* Gaya dasar navbar */
+nav ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+display: flex;
+}
+
+nav ul li {
+margin: 0 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #8b8b8b;  /* Warna teks link */
+position: relative;
+font-size: 18px;
+font-weight: bold;
+}
+
+/* Garis bawah yang akan animasi */
+nav ul li a::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 50%;
+width: 0;
+height: 2px;
+background-color: #f8f8f8;  /* Warna garis bawah */
+transition: width 0.4s ease, left 0.3s ease;
+transform: translateX(0%);  /* Posisikan garis di tengah */
+}
+
+/* Efek hover - garis bawah muncul */
+nav ul li a:hover::after {
+width: 100%;  /* Lebar garis bawah penuh */
+left: 0;  /* Pindahkan garis ke kiri */
+color: #f8f8f8;
+}
+nav ul li a:hover {
+color: #f8f8f8;
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+#intro h2.light-theme {
+    color: #4b4b4b;
+}
+#intro h2.dark-theme {
+    color: #f8f8f8;
+}
+#intro p.light-theme {
+    color: #4b4b4b;
+}
+#intro p.dark-theme {
+    color: #f8f8f8;
+}
+
+#interests {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+button:hover {
+    background-color: whitesmoke;
+    color: #444;
+}
+#interests .card img {
+    width: 40%;
+}
+#skills .card img {
+    width: 40%;
+}
