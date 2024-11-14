@@ -100,7 +100,14 @@ color: #f8f8f8;
         margin-top: 10px; /* Memberi jarak pada tombol tema */
     }
     /* Kontainer utama untuk scroll */
-    .scroll-container {
+    #interests {
+      display: flex;         /* Mengatur item secara horizontal */
+      overflow-x: auto;      /* Membuat scroll horizontal */
+      width: 100%;           /* Lebar kontainer */
+      padding: 10px;
+      gap: 10px;             /* Jarak antar div */
+    }
+    #skills {
       display: flex;         /* Mengatur item secara horizontal */
       overflow-x: auto;      /* Membuat scroll horizontal */
       width: 100%;           /* Lebar kontainer */
@@ -109,7 +116,7 @@ color: #f8f8f8;
     }
     
     /* Kotak-kotak div anak */
-    .box {
+    .card {
       min-width: 200px;      /* Lebar setiap kotak */
       height: 150px;         /* Tinggi kotak */
       background-color: lightblue;
